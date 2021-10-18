@@ -1,0 +1,264 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
+*,*::before,*::after{ padding: 0;  margin: 0;  box-sizing: border-box; user-select: none}
+
+.slider_container,
+.slides,
+.slide_image,
+.slide_text,
+.arrows,
+.prev,
+.next,
+.prev:hover,
+.next:hover,
+.section_dots,
+.dot,
+.dot:hover,
+.active_dot{
+    display: grid;
+    position: relative;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.slider_container {
+    height: 100vh;
+    width:  100vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.active { display: grid; }
+.inactive { display: none; }
+
+.slides {
+    height: 175vh;
+    width:  100vw;
+    position: relative;
+}
+
+.slide_section,
+.slide_image{
+    height: 100vh;
+    width:  100vw;
+    position: relative;
+}
+
+.slide_text{
+    height: 50vh;
+    width:  85vw;
+    bottom: 75vh;
+    position: relative;
+}
+
+.slide_h2,
+.slide_h3 {
+    height: 15vh;
+    width:  85vw;
+    color: white;
+    text-align: center;
+    font-size: 7vh;
+    font-weight: 800;
+    font-family: 'Alex Brush', cursive;
+    color: rgba(255,255,255,0.8);
+}
+
+.arrows{
+    height: 15vh;
+    width:  100vw;
+    bottom: 50vh;
+}
+
+.prev,
+.next {
+    height: 10vh;
+    width: 5vw;
+    position: absolute;
+    cursor: pointer;
+    font-size: 5vh;
+    font-weight: bold;
+    border-radius: 2vh;
+    color: rgba(0,0,0,0.8);
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: all 0.5s linear;
+}
+
+.prev{ left: 5vw; }
+.next{ right: 5vw; }
+
+.prev:hover,
+.next:hover {
+    position: absolute;
+    font-size: 5vh;
+    font-weight: bold;
+    border-radius: 2vh;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 0.5s linear;
+}
+
+.section_dots{
+    height: 10vh;
+    width:  30vw;
+    grid-template-columns: repeat(5,1fr);
+    bottom: 20vh;
+}
+
+.dot {
+    height: 4vh;
+    width: 2.3vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 2vh;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+
+.active_dot,
+.dot:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all 0.5s linear;
+}
+
+
+
+@media screen and (max-width: 500px){
+
+    .slides {
+        height: 185vh;
+        width:  100vw;
+        position: relative;
+    }
+
+    .slide_text{
+        height: 60vh;
+        width:  85vw;
+        bottom: 82vh;
+        position: relative;
+    }
+
+    .slide_h2,
+    .slide_h3 { font-size: 6vh; margin: 8vh}
+
+    .prev,
+    .next {
+        height: 10vh;
+        width: 14vw;
+        font-size: 6vh;
+    }
+
+    .prev{ left: 5vw; }
+    .next{ right: 5vw; }
+
+    .section_dots{
+        height: 10vh;
+        width:  70vw;
+        grid-template-columns: repeat(5,1fr);
+        bottom: 20vh;
+    }
+
+    .dot {
+        height: 6vh;
+        width: 10vw;
+        border-radius: 4vh;
+        transition: all 0.5s linear;
+    }
+
+    .active_dot,
+    .dot:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+        transition: all 0.5s linear;
+    }
+}
+
+
+
+@media screen and (min-width: 501px) and(max-width: 700px){
+
+    .slide_text{
+        height: 50vh;
+        width:  85vw;
+        bottom: 70vh;
+        position: relative;
+    }
+
+    .slide_h2,
+    .slide_h3 { font-size: 6vh; }
+
+    .prev,
+    .next {
+        height: 10vh;
+        width: 14vw;
+        font-size: 6vh;
+    }
+
+    .prev{ left: 5vw; }
+    .next{ right: 5vw; }
+
+    .section_dots{
+        height: 10vh;
+        width:  70vw;
+        grid-template-columns: repeat(5,1fr);
+        bottom: 20vh;
+    }
+
+    .dot {
+        height: 5vh;
+        width: 9vw;
+        border-radius: 4vh;
+        transition: all 0.5s linear;
+    }
+
+    .active_dot,
+    .dot:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+        transition: all 0.5s linear;
+    }
+}
+
+
+@media screen and (min-width: 701px) and (max-width: 1025px){
+
+    .slide_text{
+        height: 50vh;
+        width:  85vw;
+        bottom: 70vh;
+        position: relative;
+    }
+
+    .slide_h2,
+    .slide_h3 { font-size: 6vh; }
+
+    .prev,
+    .next {
+        height: 10vh;
+        width: 14vw;
+        font-size: 6vh;
+    }
+
+    .prev{ left: 5vw; }
+    .next{ right: 5vw; }
+
+    .section_dots{
+        height: 10vh;
+        width:  70vw;
+        grid-template-columns: repeat(5,1fr);
+        bottom: 20vh;
+    }
+
+    .dot {
+        height: 6vh;
+        width: 8vw;
+        border-radius: 4vh;
+        transition: all 0.5s linear;
+    }
+
+    .active_dot,
+    .dot:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+        transition: all 0.5s linear;
+    }
+}
