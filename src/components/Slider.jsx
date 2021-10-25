@@ -11,7 +11,7 @@ const Slider = (props) => {
     useEffect(() => {
         const interval = setInterval (() => {
             setActiveId(activeId === len ? 0 : activeId + 1);
-        },10000);
+        },3000);
         return () => clearInterval(interval);
     },[activeId])
 
